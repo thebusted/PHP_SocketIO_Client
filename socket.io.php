@@ -43,6 +43,7 @@ class SocketIO
         if ($handshaked){
             fwrite($fd, $this->hybi10Encode('42["' . $action . '", "' . addslashes($data) . '"]'));
             fread($fd,1000000);
+            fclose($fd);
             return true;
         } else {return false;}
     }
