@@ -17,7 +17,7 @@ class SocketIO
      * @param string $transport - transport type
      * @return bool
      */
-    public function send($host = null, $port = null, $action= "message",  $data = null, $address = "/socket.io/?EIO=2", $transport = 'websocket')
+    public function send($host = null, $port = null, $action= "message",  $data = null, $address = "/socket.io/?EIO=3", $transport = 'websocket')
     {
         $fd = fsockopen($host, $port, $errno, $errstr);
         if (!$fd) {
